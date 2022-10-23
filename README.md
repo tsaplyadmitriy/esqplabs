@@ -6,4 +6,4 @@ This repo contains implementation of three tasks for ESQP course:
 - Create GitHub Action to spell check README.nd using aspell
 - Design a coding style guide (in Markdown) for your favorite language
 
-I've created codestyle document for Dart programming language and added spellchecking + telegram notifications into Github Actions.
+I've created codestyle document for Dart programming language and added spellchecking + telegram notifications into Github Actions
