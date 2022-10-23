@@ -1,12 +1,25 @@
-name: Spellcheck Action
-on: push
-
+name: spellcheck
+on:
+  pull_request:
 jobs:
-  build:
-    name: Spellcheck
+  check-spelling:
     runs-on: ubuntu-latest
     steps:
-    # The checkout step
-    - uses: actions/checkout@main
-    - uses: rojopolis/spellcheck-github-actions@0.27.0
-      name: Spellcheck
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check Spelling
+        uses: rojopolis/spellcheck-github-actions@0.23.0
+        with:
+          config_path: .spellcheck.yml
+          task_name: Markdown
+  notify:
+    name: Notify
+    runs-on: ubuntu-latest
+    steps:
+      - name: send default message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+      
+ 
