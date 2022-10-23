@@ -5,3 +5,5 @@ aspell
 nd
 Github
 codestyle
+github
+md
