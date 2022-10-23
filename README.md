@@ -1,5 +1,7 @@
 # ESQP Labs
 
+![example workflow](https://github.com/tsaplyadmitriy/esqplabs/actions/workflows/spellcheck.yaml/badge.svg)
+
 This repo contains implementation of three tasks for ESQP course:
 
 - Configure GitHub Action to send a message to Telegram when the build fails
